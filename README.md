@@ -17,16 +17,49 @@ Implantar una arquitectura escalable horitzontalment a AWS utilitzant WordPress,
 
 ## 🏗️ Arquitectura del Sistema
 
-(INSEREIX AQUÍ UN DIAGRAMA – pots fer-lo amb draw.io o Canva)
-
-Components principals:
-
-- EC2 (instàncies WordPress)
-- RDS PostgreSQL (Master-Slave)
-- EFS (fitxers compartits)
-- ALB (Application Load Balancer)
-- Auto Scaling Group
-- AWS Backup
+                     🌐 Usuaris / Internet
+                                │
+                                ▼
+                ┌────────────────────────────────┐
+                │ALB (Application Load Balancer) │
+                └────────────────────────────────┘
+                                │
+                                ▼
+                   ┌─────────────────────────┐
+                   │   Auto Scaling Group    │
+                   └─────────────────────────┘
+                       │        │        │
+                       ▼        ▼        ▼
+                ┌────────┐ ┌────────┐ ┌────────┐
+                │  EC2   │ │  EC2   │ │  EC2   │
+                │WordPress││WordPress││WordPress│
+                └────────┘ └────────┘ └────────┘
+                       │        │        │
+                       └────────┴────────┘
+                                │
+                                ▼
+                ┌────────────────────────────┐
+                │  EFS (Fitxers compartits)  │
+                │        /wp-content         │
+                └────────────────────────────┘
+                                │
+                                ▼
+                ┌────────────────────────────┐
+                │     RDS PostgreSQL         │
+                │        Master              │
+                └────────────────────────────┘
+                                │
+                                ▼
+                ┌────────────────────────────┐
+                │     RDS PostgreSQL         │
+                │         Slave              │
+                └────────────────────────────┘
+                                │
+                                ▼
+                ┌────────────────────────────┐
+                │        AWS Backup          │
+                │ (Còpies de seguretat)      │
+                └────────────────────────────┘
 
 ---
 
@@ -67,7 +100,7 @@ Avantatges:
 Sistema de fitxers compartit entre totes les instàncies EC2.
 
 Funció:
-- Compartir carpeta `/wp-content`
+- Compartir carpeta `/var/www/html`
 - Garantir consistència entre instàncies
 
 ---

@@ -18,6 +18,15 @@ Aquest servei permet tenir una base de dades gestionada, segura i amb funcionali
 
 ---
 
+## Seguretat
+
+- Grup de seguretat: **SGmysql-wordpress**
+- Port: **3306**
+
+![SG](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/rds01.png)
+
+---
+
 ## Funció dins de l’arquitectura
 
 La base de dades emmagatzema tota la informació del lloc web:
