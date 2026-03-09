@@ -14,6 +14,10 @@ Aquest servei és necessari en arquitectures escalables amb múltiples servidors
 ![Nou sistema d'arxius](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/efs02.png)
 
 - Creem el grup de seguretat per permetre el tràfic NFS
+![Grup de seguretat](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/efs03.png)
+
+- Configuració en l'apartat de Xarxes , canviarem el grup de seguretat pel que hem creat anteriorment per el EC2 i EFS
+![Configuració en xarxes](/home/franco/wordpress-aws-cloud/docs/screenshots/efs04.png)
 
 ## Funció en WordPress
 
