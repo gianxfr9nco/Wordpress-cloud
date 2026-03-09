@@ -8,21 +8,51 @@ Aquest servei és necessari en arquitectures escalables amb múltiples servidors
 
 ---
 
+## Passos per crear un EFS
+
+Possem el nom del sistema d'arxius i la VPC predeterminada
+![Nou sistema d'arxius](<docs/screenshots/efs02.png>)
+
+
 ## Funció en WordPress
 
-En aquest projecte, EFS s’utilitza per compartir la carpeta:
+En aquest projecte, EFS s’utilitza per compartir les carpetes:
 
-/wp-content
+/var/www/html **dades del wordpress**
 
 Aquesta carpeta conté:
 
-- Plugins
-- Temes
-- Imatges i arxius pujats pels usuaris
+- wp-admin
+- wp-includes
+- core de wordpress
+- configuraciones
+- themes
+- plugins
+- uploads
 
 Gràcies a EFS, totes les instàncies EC2 utilitzen els mateixos fitxers.
 
 ---
+
+## Configuració
+
+```bash
+# 1. Instal·lar el client NFS
+sudo yum install -y nfs-utils
+
+# 2. Crear el punt de muntatge
+sudo mkdir -p /mnt/efs
+
+# 3. Conectar el EFS al punto de montaje
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport xxxxxxxxxx.us-east-1.amazonaws.com:/ /mnt/efs
+
+# 4. Copiar los archivos de wordpress al efs
+sudo rsync -av /var/www/html /mnt/efs/
+
+# 5. Comprovació
+df -h 
+
+```
 
 ## Avantatges
 
