@@ -11,11 +11,9 @@ Aquest servei és necessari en arquitectures escalables amb múltiples servidors
 ## Passos per crear un EFS
 
 - Possem el nom del sistema d'arxius i la VPC predeterminada
-![[docs/screenshots/efs02.png]]
+![Nou sistema d'arxius](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/efs02.png)
 
 - Creem el grup de seguretat per permetre el tràfic NFS
-![[docs/screenshots/efs03.png]]
-
 
 ## Funció en WordPress
 
