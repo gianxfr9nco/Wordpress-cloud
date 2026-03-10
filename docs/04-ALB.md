@@ -14,6 +14,7 @@ Configuració:
 ![Tipus de destino](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/balancejadordec%C3%A0rregues/grupdedesti/loadbalancer01.png)
 
 - Codigo de exito : 200,302
+
 ![codi d'èxit](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/balancejadordec%C3%A0rregues/grupdedesti/loadblancer02.png)
 
 - Registrar destino : grupodedestino-wordpress **a nostra màquina original**
@@ -29,7 +30,7 @@ Un cop creat el grup de destinació , creem el balancejador de càrregues.
 ![mapeig de xarxa](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/balancejadordec%C3%A0rregues/loadbalancer06.png)
 
 - Grup de seguretat : els mateixos de la nostra instància
-![grup de seguretat](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/loadbalncer07.png)
+![grup de seguretat](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/balancejadordec%C3%A0rregues/loadbalncer07.png)
 
 - Agent d'escolta i adreçament : HTTP / Port : 80 | Acció predeterminada : grupodedestino-wordpress
 ![Agent d'escolta i adreçament](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/balancejadordec%C3%A0rregues/loadbalancer08.png)
