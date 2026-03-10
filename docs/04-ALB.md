@@ -8,12 +8,29 @@ Això permet millorar el rendiment del sistema i garantir alta disponibilitat.
 
 ---
 
-## Configuració utilitzada
+## Grup de desti
+Configuració:
+- Tipus de destino : Instancias | Protocol : HTTP / Port : 80
 
-- Protocol: HTTP
-- Port: 80
-- Target Group: instàncies EC2
-- Health Checks activats
+- Codigo de exito : 200,302
+
+- Registrar destino : grupodedestino-wordpress **a nostra màquina original**
+
+## Balancejador de càrregues
+Un cop creat el grup de destinació , creem el balancejador de càrregues.
+
+- Nom : balanceadordecarga-wordpress
+
+- mapeig de xarxa : seleccionem els mapeigs del teu gust
+
+- Grup de seguretat : els mateixos de la nostra instància
+
+- Agent d'escolta i adreçament : HTTP / Port : 80 | Acció predeterminada : grupodedestino-wordpress
+
+---
+
+## Comprovació
+
 
 ---
 

@@ -52,24 +52,34 @@ Gràcies a EFS, totes les instàncies EC2 utilitzen els mateixos fitxers.
 
 1. Instal·larem el següent paquet **nfs-utils**
 
-    ```sudo dnf install nfs-utils -y```
+    ```bash
+    sudo dnf install nfs-utils -y
+    ```
 
 2. Ja instal·lat el paquet anirem al nostre efs a buscar l'ordre de muntatge per nfs
 
-    ![Ordre de muntatge](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/efs06.png)
+    ![Ordre de muntatge](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/efs05.png)
 
 
 3. Ara a la carpeta creada /mnt/efs montarem el efs
 
-    ```sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport xxxxxxxxxx.us-east-1.amazonaws.com:/ /mnt/efs```
+    ```bash
+    sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport xxxxxxxxxx.us-east-1.amazonaws.com:/ /mnt/efs
+    ```
 
     Y per comprovar que s'ha muntat correctament
-    ```df -h``` 
+    ```bash
+    df -h
+    ``` 
 
 4. I perquè cada vegada que iniciem la instància no es tregui el muntatge afegim la línia següent a aquest fitxer **/etc/fstab**
 
-    ```xxxxxxxx.us-east-1.amazonaws.com:/ /mnt/efs nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 0 0```
+    ```bash
+    xxxxxxxx.us-east-1.amazonaws.com:/ /mnt/efs nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 0 0
+    ```
 
 5. I per sincronitzar els arxius que tenim al /var/www/html amb el punt de muntatge
 
-    ```sudo rsync -av /var/www/html /mnt/efs/```
+    ```bash
+    sudo rsync -av /var/www/html /mnt/efs/
+    ```

@@ -39,7 +39,9 @@ La base de dades emmagatzema tota la informació del lloc web:
 
 Les instàncies EC2 es connecten a la base de dades utilitzant **endpoint de RDS**
 
-```mysql -h wordpress-base.xxxxxxx.us-east-1.rds.amazonaws.com -P 3306 -u admin -p```
+```bash
+mysql -h wordpress-base.xxxxxxx.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
+```
 
 ---
 

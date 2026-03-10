@@ -112,7 +112,7 @@ Distribueix el tràfic entre instàncies EC2.
 Configuració:
 - Target Group
 - Health Checks
-- Listener HTTP
+- Listener HTTP : 
 
 ---
 
