@@ -23,7 +23,7 @@ Aquest servei permet tenir una base de dades gestionada, segura i amb funcionali
 - Grup de seguretat: **SGmysql-wordpress**
 - Port: **3306**
 
-![SG](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/rds01.png)
+![SG](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/RDS/rds01.png)
 
 ---
 

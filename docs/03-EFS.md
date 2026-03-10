@@ -39,13 +39,13 @@ Gràcies a EFS, totes les instàncies EC2 utilitzen els mateixos fitxers.
 ## Passos per crear un EFS
 
 - Possem el nom del sistema d'arxius i la VPC predeterminada
-![Nou sistema d'arxius](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/efs02.png)
+![Nou sistema d'arxius](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/EFS/efs02.png)
 
 - Creem el grup de seguretat per permetre el tràfic NFS
-![Grup de seguretat](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/efs03.png)
+![Grup de seguretat](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/EFS/efs03.png)
 
 - Configuració en l'apartat de Xarxes , canviarem el grup de seguretat pel que hem creat anteriorment per el EC2 i EFS
-![Configuració en xarxes](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/efs04.png)
+![Configuració en xarxes](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/EFS/efs04.png)
 
 
 ## Muntar nostra EFS
@@ -58,7 +58,7 @@ Gràcies a EFS, totes les instàncies EC2 utilitzen els mateixos fitxers.
 
 2. Ja instal·lat el paquet anirem al nostre efs a buscar l'ordre de muntatge per nfs
 
-    ![Ordre de muntatge](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/efs05.png)
+    ![Ordre de muntatge](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/EFS/efs05.png)
 
 
 3. Ara a la carpeta creada /mnt/efs montarem el efs
