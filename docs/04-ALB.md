@@ -13,6 +13,7 @@ Configuració:
 - Tipus de destino : Instancias | Protocol : HTTP / Port : 80
 
 - Codigo de exito : 200,302
+![codi de exito](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/loadblancer02.png)
 
 - Registrar destino : grupodedestino-wordpress **a nostra màquina original**
 
@@ -24,6 +25,7 @@ Un cop creat el grup de destinació , creem el balancejador de càrregues.
 - mapeig de xarxa : seleccionem els mapeigs del teu gust
 
 - Grup de seguretat : els mateixos de la nostra instància
+![grup de seguretat](https://github.com/gianxfr9nco/Wordpress-cloud/blob/main/docs/screenshots/loadbalncer07.png)
 
 - Agent d'escolta i adreçament : HTTP / Port : 80 | Acció predeterminada : grupodedestino-wordpress
 
